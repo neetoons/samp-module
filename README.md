@@ -1,31 +1,31 @@
-## SAMP-MODULER
-- A quickly way to create a set of new moduled files and folders for SA-MP systems with a more used standard system.
-- Useful for converting monolitic gamemodes scripts in moduled gamemodes scripts.
+## SAMP-module
+- A quick way to create a set of new moduled files and folders for SA-MP systems with a more used standard system.
+- Useful for converting monolithic gamemodes scripts in moduled gamemodes scripts.
 - This won't moduled your code, you have to module manually after using this generated template.
 
-_❗Disclaimer: As a admin I have to say verify all codes and programs you download from Discord before to execute._
+_❗Disclaimer: As an admin, I have to verify all codes and programs you download from Discord before executing._
 
 ## Installation: 
-1. save the samp-moduler.bat in a folder like c:/samp-moduler.
-2. set the samp-moduler.bat in the windows variable path (user path or system path, you prefer).
-2. Open the command prompt and go the core folder of you gamemode (it's recommended having 2 folders in gamemodes folder, utils and core, core is where you place your moduled codes and utils folder is for general data and functions used around the gamemode like colors and maths).
-3. execute the command samp-moduler:
+1. save the samp-module.bat in a folder like c:/samp-module.
+2. set the samp-module.bat in the Windows variable path (user path or system path, you prefer).
+2. Open the command prompt and go to the core folder of your gamemode (it's recommended to have 2 folders in gamemodes folder, utils, and core, the core is where you place your moduled codes, and the utils folder is for general data and functions used around the gamemode like colors and maths).
+3. execute the command samp-module:
 ```batch
-c:\Users\user>samp-moduler
+c:\Users\user>samp-modtuler
 ```
 
 ## Quick-start:
-If you don't want to install it manually just move the samp-moduler.bat to the core folder and execute it.
+If you don't want to install it manually, move the samp-module.bat to the core folder and execute it.
 
 ## Features: 
-### 1. Generate system moduled folder and files (self explained)
+### 1. Generate system-moduled folders and files (self-explained)
 This will generate these files 
 - **header.inc**  (for constants and variables, defines, enums, new, const, etc)
 - **funcs.inc** (functions and public functions)
 - **impl.inc** (for callbacks/events, implementations)
-- **entry.inc** (file which index the whole module)
+- **entry.inc** (file that indexes the whole module)
 
-For example, entry generated file will looks like this:
+For example, entry generated file will look like this:
 ```c
 //farmer_entry.inc
 #if defined farmer_included 
@@ -40,7 +40,7 @@ For example, entry generated file will looks like this:
 #include "core/gamemodes/jobs/farmer/farmer_impl.inc"
 ```
 ### 2. Generate commands entry file 	
-Index all the current commands files from the commands folder in a entry file and then used by main entry module file. For example, entry commands generated file will looks like this:
+Index all the current commands files from the commands folder in an entry file and then use by main entry module file. For example, the entry commands generated file will look like this:
 ```c
 //farmer_cmds_entry.inc
 #if defined farmer_cmds_included 
@@ -56,7 +56,7 @@ Index all the current commands files from the commands folder in a entry file an
 //if you have a jobs folder you'll have to type manually
 #include "gamemodes/core/jobs/farmer/commands/anything.inc" 	
 ```
-- You must have to create a commands folder if you didn't before to use this feature in the created module folder (farmer for example) and execute this feature in the commands folder.
+- You must create a commands folder if you didn't before, use this feature in the created module folder (farmer for example), and execute this feature in the commands folder.
 - Note for beginners: Commands files are where you will code the cmd:command(playerid, params[]), one command or a group or commands as you prefer.
 
 ### Expected moduled system folders: 
@@ -81,40 +81,40 @@ main.pwn:
 ### Expected static/important-scripts files/folders and the whole core folder: 
  ```c
  -core
- --- _Player // fundamental/base codes, underscore in the beginning for the important and place the folde to the top of directory explorer
+ --- _Player // fundamental/base codes, underscore in the beginning for the important and place the folder to the top of the directory explorer
  --- --- Player_entry.inc //the beginning underscore is unnecessary here 
- --- --- PlayerTemp.inc  // variable used for connect all modules and systems 
+ --- --- PlayerTemp.inc  // variable used to connect all modules and systems 
  --- --- PlayerCharacter.inc 
  --- --- PlayerObject.inc 
  --- --- PlayerWeapon.inc
- --- _Database // not a commands folder here of course, only connection maybe, do it as you prefer
+ --- _Database // not a commands folder here, of course, the only connection may be, do it as you prefer
  --- --- Database_header.inc 
  --- --- Database_funcs.inc 
  --- --- Database_impl.inc 
-// login_logout, I dunno, still thinking it, just group all the code that change for one reason and separe the code if not.
+// login_logout, I don't know, still thinking about it, just group all the code that changes for one reason and separate the code if not.
  --- _login 
  --- --- farmer // a module
 ```
 Note: There's not a PlayerData, this variable is too general! (PLAYER_TEMP is a little bit but is better) it's only used for code tutorials 
 
 ## FAQ:
-you should have some questions about the files names, alright let's see.
+you should have some questions about the file names, alright let's see.
 
-- ### Why these way?
-Convention over configuration, this means you have to structure your system setting all with commons names and prefixes to improve your speed of reading files with your muscle memory.
+- ### Why this way?
+Convention over configuration, means you have to structure your system settings all with common names and prefixes to improve your speed of reading files with your muscle memory.
 
-Let's see a example: files have MODULE_NAME with WHAT_I_AM name, "I from this module and I have these types of data" i.e taxi_driver_entry.inc, alright, maybe you thought why the MODULE_NAME when the files are in the module folder with his module name, that's right but what about having a lot of files and the sidebar get you scrolling all the times looking for the folder file that you have opened in front of you?
+Let's see an example: files have MODULE_NAME with WHAT_I_AM name, "I from this module and I have these types of data" i.e. taxi_driver_entry.inc, alright, maybe you thought why the MODULE_NAME when the files are in the module folder with his module name, that's right but what about having a lot of files and the sidebar gets you scrolling all the time looking for the folder file that you have opened in front of you?
 
-think how fast is search a file just using the search file feature of your editor code with the file name "keyword" what about having the module name with the type of data of the file in the top of your code menu/bar editor? 
+think how fast is to search a file just using the search file feature of your editor code with the file name "keyword" What about having the module name with the type of data of the file in the top of your code menu/bar editor? 
 
-That's it, if you was paying attention this system looks like YSI folder system, nothing to re-invent.
+That's it, if you were paying attention this system looks like YSI folder system, with nothing to re-invent.
 
-- ### Why the undescore in the beginning of names?
+- ### Why the underscore at the beginning of names?
 Easy way to place visually on top in the sidebar code editor and file explorer.
 
 - ### Why .inc file extension?
-Why .inc instead of .pwn in included files names? .inc is used to describe this file depend of a main file to work as all included should work, the only exception could be this file is made independient for testing (unit testing, actually is a good way, maybe I recommend in the future) including #include <a_samp> even being a include file. .inc Files are file that will be included in the main program file, that's it. It's common to use .pwn in whole gamemode because the community sometimes don't know how to set the syntax language in their code editor, this is fixed using the open.mp extensions (vscode in this case).
+Why .inc instead of .pwn in included file names? .inc is used to describe this file depending on a main file to work as all included should work, the only exception could be this file is made independent for testing (unit testing, actually a good way, maybe I recommend in the future) including #include <a_samp> even being an include file. .inc Files are files that will be included in the main program file, that's it. It's common to use .pwn in the whole gamemode because the community sometimes doesn't know how to set the syntax language in their code editor, this is fixed using the open.mp extensions (vscode in this case).
 - ### Why a batch file?
-This was made in Batch as a scratch and then as a Beta but maybe in the future I will code a program with more features.
+This was made in Batch as a scratch and then as a Beta but maybe in the future, I will code a program with more features.
 
- I'd like if I you make feedback and bug reports.
+ I'd like it if you make feedback and bug reports.
