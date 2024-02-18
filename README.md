@@ -112,6 +112,8 @@ That's it, if you was paying attention this system looks like YSI folder system,
 - ### Why the undescore in the beginning of names?
 Easy way to place visually on top in the sidebar code editor and file explorer.
 
+- ### Why .inc file extension?
+Why .inc instead of .pwn in included files names? .inc is used to describe this file depend of a main file to work as all included should work, the only exception could be this file is made independient for testing (unit testing, actually is a good way, maybe I recommend in the future) including #include <a_samp> even being a include file. .inc Files are file that will be included in the main program file, that's it. It's common to use .pwn in whole gamemode because the community sometimes don't know how to set the syntax language in their code editor, this is fixed using the open.mp extensions (vscode in this case).
 - ### Why a batch file?
 This was made in Batch as a scratch and then as a Beta but maybe in the future I will code a program with more features.
 
