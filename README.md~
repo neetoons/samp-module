@@ -1,3 +1,7 @@
+# SA-MP moduled script system 
+
+Hi samp community, I'll propose/recommend in this thread a standard way for moduling code in SA-MP develop and the same time I'll present a little program tool to make it easy and quickly. I make a thread instead of giving you a github repo in #content because I'd like to know what are your thoughts on this system here and _I don't have Internet in this moment_.
+
 ## SAMP-MODULER
 - A quickly way to create a set of new moduled files and folders for SA-MP systems with a more used standard system.
 - Useful for converting monolitic gamemodes scripts in moduled gamemodes scripts.
