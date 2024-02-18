@@ -107,7 +107,7 @@ Let's see an example: files have MODULE_NAME with WHAT_I_AM name, "I from this m
 
 think how fast is to search a file just using the search file feature of your editor code with the file name "keyword" What about having the module name with the type of data of the file in the top of your code menu/bar editor? 
 
-That's it, if you were paying attention this system looks like YSI folder system, with nothing to re-invent.
+That's it, if you were paying attention this system looks like [YSI](https://github.com/pawn-lang/YSI-Includes) folder system, with nothing to re-invent.
 
 - ### Why the underscore at the beginning of names?
 Easy way to place visually on top in the sidebar code editor and file explorer.
