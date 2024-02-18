@@ -11,7 +11,7 @@ _❗Disclaimer: As an admin, I have to verify all codes and programs you downloa
 2. Open the command prompt and go to the core folder of your gamemode (it's recommended to have 2 folders in gamemodes folder, utils, and core, the core is where you place your moduled codes, and the utils folder is for general data and functions used around the gamemode like colors and maths).
 3. execute the command samp-module:
 ```batch
-c:\Users\user>samp-modtuler
+c:\Users\user>samp-module
 ```
 
 ## Quick-start:
